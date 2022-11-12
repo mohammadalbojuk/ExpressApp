@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".SignupAct">
+
+    <EditText
+        android:id="@+id/signup_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg"
+        android:drawableRight="@drawable/baseline_phone_white_24"
+        android:ems="10"
+        android:gravity="center"
+
+        android:hint="Mobile No."
+        android:inputType="phone"
+        android:padding="20dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd" />
+
+    <EditText
+        android:id="@+id/signup_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg"
+        android:drawableRight="@drawable/baseline_lock_white_24"
+        android:ems="10"
+        android:gravity="center"
+
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd" />
+
+    <EditText
+        android:id="@+id/signup_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg"
+        android:drawableRight="@drawable/baseline_lock_white_24"
+        android:ems="10"
+        android:gravity="center"
+
+        android:hint="Confirm"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd" />
+
+    <EditText
+        android:id="@+id/signup_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg"
+        android:drawableRight="@drawable/baseline_lock_white_24"
+        android:ems="10"
+        android:gravity="center"
+
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#fff"
+        android:text="Sign Up"
+        android:textColor="@color/colorPrimary" />
+
+
+</LinearLayout>

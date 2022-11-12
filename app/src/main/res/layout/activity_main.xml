@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:background="@drawable/bg"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        android:hint="Mobile No."
+        android:gravity="center"
+        android:drawableRight="@drawable/baseline_phone_white_24"
+
+        android:id="@+id/login_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:background="@drawable/bg"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        android:hint="Password"
+        android:gravity="center"
+        android:drawableRight="@drawable/baseline_lock_white_24"
+
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:layout_margin="20dp"
+        android:textColor="#fff"
+
+        android:id="@+id/login_rem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remember Me" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="20dp"
+        android:background="#FFFFFF"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login" />
+
+    <TextView
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:id="@+id/login_ft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="First Time" />
+
+</LinearLayout>
