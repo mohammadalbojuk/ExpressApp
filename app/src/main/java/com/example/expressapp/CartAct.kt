@@ -1,6 +1,7 @@
 package com.example.expressapp
 
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.location.Location
@@ -47,6 +48,10 @@ class CartAct : AppCompatActivity() {
         rq.add(jar)
 
         cart_confirm.setOnClickListener {
+            val pd = ProgressDialog(this)
+            pd.setMessage("Please Wait...")
+            pd.setProgressStyle(ProgressDialog.STYLE_SPINNER)
+            pd.show()
 
             var m = getSystemService(Context.LOCATION_SERVICE)
                     as LocationManager
@@ -57,10 +62,9 @@ class CartAct : AppCompatActivity() {
                     var rq = Volley.newRequestQueue(applicationContext)
                     var sr = object: StringRequest(Request.Method.POST,url,
                         Response.Listener {
-                            startActivity(
-                                Intent(applicationContext,
-                                ConfirmAct::class.java)
-                            )
+                            pd.hide()
+                            startActivity(Intent(applicationContext,
+                                ConfirmAct::class.java))
                             finish()
                         },
                         Response.ErrorListener {  })
@@ -95,8 +99,7 @@ class CartAct : AppCompatActivity() {
                 }
             }
 
-            m.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER,
+            m.requestLocationUpdates(LocationManager.GPS_PROVIDER,
                 1,0f,s)
 
 
